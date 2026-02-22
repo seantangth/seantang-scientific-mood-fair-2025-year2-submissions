@@ -6,9 +6,9 @@ import torch.nn.functional as F
 from scipy.ndimage import gaussian_filter1d
 
 # ============================================================================
-# v226c Config: v226b but more aggressive Affi TF weight (80/20)
-# v226b Affi Public transfer rate was 1.7x -> push more TF weight
-# 86/14 gave -170, try 80/20 for potentially more gain
+# v232c Config: v226c + v230 Private h=256 + v231 CORAL 3.5/1.5 Public TCN
+# Private TCN: h=256, L=3, dropout=0.4, 1feat (was h=128, dropout=0.5)
+# Public TCN: retrained with CORAL=3.5/Mean=1.5 (was 3.0/1.0)
 # ============================================================================
 AFFI_PUB_W = (0.60, 0.10, 0.20, 0.10)  # v218b conservative (proven: -95)
 AFFI_PRIV_W = (0.20, 0.00, 0.46, 0.34)  # v214 (proven: -560)
@@ -29,12 +29,12 @@ V213_TF_DROPOUT = 0.2
 V213_TF_SEEDS = [789, 42, 2024]  # best 3 (val: 789=50,207, 42=50,974, 2024=50,947)
 TCN_TF_WEIGHT = 0.64  # optimized: 3-seed v213 TF is strong enough for more weight
 # Beignet Private TCN (v202b: h=128, best 3 seeds per domain)
-V200B_PRIV_H = 128
+V200B_PRIV_H = 256           # v230: upgraded from 128
 V200B_PRIV_LAYERS = 3
-V200B_PRIV_DROPOUT = 0.5
+V200B_PRIV_DROPOUT = 0.4     # v230: was 0.5
 V200B_PRIV_FEAT = 1
 V200B_PRIV1_SEEDS = [2024, 42, 789]   # best 3 for priv1
-V200B_PRIV2_SEEDS = [2024, 42, 123]   # best 3 for priv2
+V200B_PRIV2_SEEDS = [2024, 42, 789]   # v230: was [2024, 42, 123]
 
 # ============================================================================
 # TCN Architecture
