@@ -6,7 +6,7 @@ Repository for all challenge submission materials.
 
 - `iharp/predicting_coastal_flooding_events/` - iHARP Predicting Coastal Flooding Events
 - `a3d3/neural_forecasting/` - A3D3 Neural Forecasting Challenge
-- `imageomics_informatics/beetles_scientific/` - Imageomics Informatics Beetles Scientific (TBD)
+- `imageomics_informatics/beetles_scientific/` - Imageomics Informatics Beetles Scientific
 
 ## Notes
 
@@ -17,3 +17,6 @@ Repository for all challenge submission materials.
   - `a3d3/neural_forecasting/baselines/submissions/v226c_ensemble/`
   - Model weights: `a3d3/neural_forecasting/model_weights/`
   - Training code: `a3d3/neural_forecasting/baselines/training/`
+- Imageomics Beetles Scientific final submission (V124c MLP LP-FT):
+  - `imageomics_informatics/beetles_scientific/submission/`
+  - Training code: `imageomics_informatics/beetles_scientific/training/v124c/`
