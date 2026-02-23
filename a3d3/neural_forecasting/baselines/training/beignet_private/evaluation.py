@@ -1,7 +1,7 @@
 """
 Beignet Private TCN Evaluation Script
 ========================================
-Load a trained Beignet Private TCN checkpoint (h=128) and evaluate on a
+Load a trained Beignet Private TCN checkpoint (h=256) and evaluate on a
 held-out validation split from the private domain data.
 
 Each private domain (priv1: 2022-06-01, priv2: 2022-06-02) is evaluated

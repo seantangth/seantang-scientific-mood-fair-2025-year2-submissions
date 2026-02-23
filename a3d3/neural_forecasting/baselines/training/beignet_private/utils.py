@@ -2,7 +2,7 @@
 Beignet Private Utilities
 ===========================
 Shared helper functions for training and evaluating the Beignet Private
-TCN model (h=128).
+TCN model (h=256).
 
 The private domains (2022-06-01 and 2022-06-02) are small datasets
 (82 and 76 samples respectively). No CORAL domain adaptation is used

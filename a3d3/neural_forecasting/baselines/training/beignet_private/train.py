@@ -1,5 +1,5 @@
 """
-Training script for Beignet Private TCN (h=128).
+Training script for Beignet Private TCN (h=256).
 
 Trains separate TCN forecasters on each Beignet private domain
 (2022-06-01 and 2022-06-02). Uses combined normalization across
@@ -8,7 +8,7 @@ both private domains for consistency.
 No CORAL domain adaptation -- the private datasets are small
 (82 and 76 samples) and there is no separate target domain to align to.
 
-Source notebook: colab_v202b_private_h128.ipynb
+Source notebook: colab_v230_private_h256.ipynb
 
 Usage:
     python train.py --data_dir /path/to/data --output_dir /path/to/output

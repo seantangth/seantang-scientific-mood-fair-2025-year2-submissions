@@ -1,6 +1,6 @@
-# v226c Ensemble Submission
+# v233b Ensemble Submission
 
-**Total MSE: 38,214** on Codabench evaluation
+**Total MSE: 38,134** on Codabench evaluation
 
 ## Model Composition (26 models)
 
@@ -14,7 +14,7 @@
 - 1x NHiTSForecaster (h=256, L=2): CORAL-trained, 1-feat
 
 ### Beignet Private (89 channels)
-- 6x TCNForecaster (h=128, L=3): 3 seeds per private domain, dropout=0.5
+- 6x TCNForecaster (h=256, L=3): 3 seeds per private domain, dropout=0.4
 
 ## Inference
 

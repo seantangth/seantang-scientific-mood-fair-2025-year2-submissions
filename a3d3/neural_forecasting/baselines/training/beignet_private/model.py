@@ -1,16 +1,16 @@
 """
-Beignet Private TCN Forecaster (h=128).
+Beignet Private TCN Forecaster (h=256).
 
 Architecture: Causal TCN encoder with cross-channel attention.
-Same architecture as the public TCN, but smaller (h=128) and without
-CORAL domain adaptation (private data is small, no separate target domain).
+Same architecture as the public TCN, but without CORAL domain adaptation
+(private data is small, no separate target domain).
 
 - Channel embedding (h//4 dims) concatenated with input features
 - TCN encoder with residual blocks, BatchNorm, GELU activation
 - Cross-channel multi-head attention over the last time step
 - Prediction head: Linear -> GELU -> Dropout -> Linear -> 10 output steps
 
-Source notebook: colab_v202b_private_h128.ipynb
+Source notebook: colab_v230_private_h256.ipynb
 """
 
 import torch
