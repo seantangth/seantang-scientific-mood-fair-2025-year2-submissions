@@ -14,8 +14,8 @@ Repository for all challenge submission materials.
   - `iharp/predicting_coastal_flooding_events/submission/`
   - `iharp/predicting_coastal_flooding_events/final_submission/`
   - Training code: `iharp/predicting_coastal_flooding_events/training/`
-- A3D3 Neural Forecasting final submission (v233b):
-  - `a3d3/neural_forecasting/baselines/submissions/v233b_ensemble/`
+- A3D3 Neural Forecasting final submission (v234b):
+  - `a3d3/neural_forecasting/baselines/submissions/v234b_ensemble/`
   - Model weights: `a3d3/neural_forecasting/model_weights/`
   - Training code: `a3d3/neural_forecasting/baselines/training/`
 - Imageomics Beetles Scientific final submission (V124c MLP LP-FT):

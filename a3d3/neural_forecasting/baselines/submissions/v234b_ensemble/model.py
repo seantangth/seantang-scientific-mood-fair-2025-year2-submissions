@@ -6,8 +6,8 @@ import torch.nn.functional as F
 from scipy.ndimage import gaussian_filter1d
 
 # ============================================================================
-# v233b Config: v232c + TCN/TF 60/40 Beignet Public
-# Beignet Public blend: 60% TCN + 40% TF (was 64/36)
+# v234b Config: v232c + TCN/TF 45/55 Beignet Public
+# Beignet Public blend: 55% TCN + 45% TF (was 64/36)
 
 # ============================================================================
 AFFI_PUB_W = (0.60, 0.10, 0.20, 0.10)  # v218b conservative (proven: -95)
@@ -27,7 +27,7 @@ V213_TF_LAYERS = 4
 V213_TF_HEADS = 8
 V213_TF_DROPOUT = 0.2
 V213_TF_SEEDS = [789, 42, 2024]  # best 3 (val: 789=50,207, 42=50,974, 2024=50,947)
-TCN_TF_WEIGHT = 0.60  # optimized: 3-seed v213 TF is strong enough for more weight
+TCN_TF_WEIGHT = 0.45  # optimized: 3-seed v213 TF is strong enough for more weight
 # Beignet Private TCN (v202b: h=128, best 3 seeds per domain)
 V200B_PRIV_H = 256           # v230: upgraded from 128
 V200B_PRIV_LAYERS = 3

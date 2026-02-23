@@ -4,7 +4,7 @@
 
 This repository contains our solution for the [NSF Neural Forecasting Challenge](https://www.codabench.org/competitions/4026/) hosted on Codabench. The challenge requires predicting future neural activity (10 timesteps) from historical neural recordings (10 timesteps) across two non-human primate subjects (**Affogato** and **Beignet**), with evaluation on out-of-distribution (OOD) sessions.
 
-**Final Score: Total MSE = 38,134** (improved from baseline 50,257, a reduction of -12,123)
+**Final Score: Total MSE = 38,096** (improved from baseline 50,257, a reduction of -12,161)
 
 ## Approach
 
@@ -24,7 +24,7 @@ Our solution is a **multi-architecture ensemble** with **domain-adaptive trainin
 |:---|:---|:---|:---|
 | Affi Public (239ch) | 4 TCN (h=384) + 5 Pre-LN TF (h=384) | TCN 80% / TF 20% | None |
 | Affi Private (239ch) | 3 TCN (h=384) | TCN 100% | None |
-| Beignet Public (89ch) | 7 TCN (h=256) + 3 Pre-LN TF (h=256) | TCN 60% / TF 40% | None |
+| Beignet Public (89ch) | 7 TCN (h=256) + 3 Pre-LN TF (h=256) | TCN 45% / TF 55% | None |
 | Beignet Private1 (89ch) | 3 TCN (h=256) + NHiTS | 80/20 | margin=0.3, sigma=0.2 |
 | Beignet Private2 (89ch) | 3 TCN (h=256) + NHiTS | 80/20 | margin=0.8, sigma=0.5 |
 
@@ -49,7 +49,8 @@ Our solution is a **multi-architecture ensemble** with **domain-adaptive trainin
 | v221 | 38,252 | Pre-LN Transformer 3-seed |
 | v226c | 38,214 | Affi Pre-LN TF 80/20 |
 | v232c | 38,157 | Private h=256 + CORAL 3.5/1.5 |
-| **v233b** | **38,134** | **TCN/TF 60/40 Beignet Public** |
+| v233b | 38,134 | TCN/TF 60/40 Beignet Public |
+| **v234b** | **38,096** | **TCN/TF 45/55 Beignet Public** |
 
 ## Repository Structure
 
@@ -57,7 +58,7 @@ Our solution is a **multi-architecture ensemble** with **domain-adaptive trainin
 .
 ├── baselines/
 │   ├── submissions/
-│   │   └── v233b_ensemble/          # Final submission (inference code)
+│   │   └── v234b_ensemble/          # Final submission (inference code)
 │   │       ├── model.py             # Inference entry point
 │   │       ├── requirements.txt
 │   │       └── README.md
@@ -88,7 +89,7 @@ Our solution is a **multi-architecture ensemble** with **domain-adaptive trainin
 
 ## How to Run Inference
 
-The submission is designed to run on the Codabench evaluation platform. The entry point is `baselines/submissions/v233b_ensemble/model.py`, which:
+The submission is designed to run on the Codabench evaluation platform. The entry point is `baselines/submissions/v234b_ensemble/model.py`, which:
 
 1. Loads all model weights from the submission directory
 2. Detects the subject (Affogato or Beignet) based on channel count
