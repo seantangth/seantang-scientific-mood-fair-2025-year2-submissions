@@ -18,6 +18,7 @@ Repository for all challenge submission materials.
   - `a3d3/neural_forecasting/baselines/submissions/v234b_ensemble/`
   - Model weights: `a3d3/neural_forecasting/model_weights/`
   - Training code: `a3d3/neural_forecasting/baselines/training/`
-- Imageomics Beetles Scientific final submission (V124c MLP LP-FT):
+- Imageomics Beetles Scientific final submission (V124c MLP LP-FT, no bias correction):
   - `imageomics_informatics/beetles_scientific/submission/`
+  - Model weights: `imageomics_informatics/beetles_scientific/submission/mlp_lpft_fold1_fp16.pt`
   - Training code: `imageomics_informatics/beetles_scientific/training/v124c/`
