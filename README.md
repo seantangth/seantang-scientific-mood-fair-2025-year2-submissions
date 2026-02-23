@@ -10,7 +10,7 @@ Repository for all challenge submission materials.
 
 ## Notes
 
-- iHARP final package is prepared under:
+- iHARP final submission (hybrid_final_v1):
   - `iharp/predicting_coastal_flooding_events/submission/`
   - `iharp/predicting_coastal_flooding_events/final_submission/`
   - Training code: `iharp/predicting_coastal_flooding_events/training/`

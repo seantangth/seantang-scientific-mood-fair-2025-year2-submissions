@@ -1,0 +1,21 @@
+{
+  "artifact_format": "g7_perday_v2",
+  "hist_days": 7,
+  "future_days": 14,
+  "feature_dim": 62,
+  "official_threshold_map": {
+    "Annapolis": 2.104,
+    "Atlantic_City": 3.344,
+    "Charleston": 2.98,
+    "Eastport": 8.071,
+    "Fernandina_Beach": 3.148,
+    "Lewes": 2.675,
+    "Portland": 6.267,
+    "Sandy_Hook": 2.809,
+    "Sewells_Point": 2.706,
+    "The_Battery": 3.192,
+    "Washington": 2.673,
+    "Wilmington": 2.423
+  },
+  "scale_pos_weight": 27.777757211983396
+}
